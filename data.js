@@ -18,7 +18,7 @@ export const users = [
         code: 69002,
         inhabitants: 68877382,
       },
-      address: '4 avenue de webpack'
+      street: '4 avenue de webpack'
     }
   },
   {
@@ -27,8 +27,12 @@ export const users = [
     age: 12,
     friends: [{ name: 'David' }, { name: 'Hugo' }],
     address: {
-      city: 0,
-      address: '13 rue de babel'
+      city: {
+        name: 'Albi',
+        code: 81000,
+        inhabitants: 12123,
+      },
+      street: '10 rue de eslint'
     }
   },
   {
@@ -42,7 +46,7 @@ export const users = [
         code: 31000,
         inhabitants: 127123123,
       },
-      address: '10 rue de nodeJs'
+      street: '10 rue de nodeJs'
     }
   },
   {
@@ -56,7 +60,7 @@ export const users = [
         code: 33000,
         inhabitants: 123132,
       },
-      address: '13 rue de babel'
+      street: '13 rue de babel'
     }
   },
   {
@@ -70,7 +74,7 @@ export const users = [
         code: 75002,
         inhabitants: 1223423132,
       },
-      address: '13 cours eslint'
+      street: '13 cours eslint'
     }
   },
 ];
