@@ -1,6 +1,6 @@
-# GraphQL-demo 
+# GraphQL-demo 📊
 
-A GraphQL demo for technological watch.  
+A [GraphQL](https://graphql.org/) demo for technological watch.  
 
 Install dependencies
 ```bash
