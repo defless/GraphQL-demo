@@ -27,4 +27,8 @@ export const schema = buildSchema(`
     users: [User]
     user(id: Int): User
   }
+  
+  type Mutation {
+    newUser(id: ID, name: String, age: Int): User
+  }
 `);
