@@ -14,6 +14,39 @@ yarn start
 
 then go to http://localhost:4000/graphql
 
+#### GraphQL logic items:
+GraphQL schema
+```
+  type Address {
+    street: String
+    city: City
+  }
+
+  type User {
+    id: ID
+    name: String
+    age: Int
+    friends: [User]
+    address: Address
+  }
+
+  type Query {
+    users: [User]
+    user(id: Int): User
+  }
+```
+
+GraphQL resolver</br>
+```js
+const root = {
+   user: ({id}) => {
+      return users[id];
+   },
+   users: () => {
+      return users;
+   },
+}
+```
 
 **Get all the informations in one request with query**:
 </br>
