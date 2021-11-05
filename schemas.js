@@ -1,4 +1,5 @@
-import { buildSchema } from 'graphql';
+import pkg from 'graphql';
+const { buildSchema } = pkg;
 
 // Construct a schema, using GraphQL schema language
 export const schema = buildSchema(`
@@ -25,7 +26,5 @@ export const schema = buildSchema(`
   type Query {
     users: [User]
     user(id: Int): User
-    health: String
-    variableName: Boolean
   }
 `);
