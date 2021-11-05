@@ -16,8 +16,8 @@ export const schema = buildSchema(`
   }
 
   type User {
-    id: ID
-    name: String
+    id: ID!
+    name: String!
     age: Int
     friends: [User]
     address: Address
@@ -29,6 +29,6 @@ export const schema = buildSchema(`
   }
   
   type Mutation {
-    newUser(id: ID, name: String, age: Int): User
+    newUser(name: String!, age: Int): User
   }
 `);

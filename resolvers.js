@@ -11,9 +11,9 @@ export const root = {
     users: () => {
       return users;
     },
-    newUser: ({id, name, age}) => {
+    newUser: ({name, age}) => {
       const newUser = {
-        id,
+        id: users.length,
         name,
         age
       }
