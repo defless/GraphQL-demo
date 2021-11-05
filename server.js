@@ -1,37 +1,9 @@
-var express = require('express');
-var { graphqlHTTP } = require('express-graphql');
-var { buildSchema } = require('graphql');
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
 
-// Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
-  type User {
-    name: String
-    age: Int
-  }
+import { schema } from './schemas.js';
 
-  type Query {
-    user(id: Int): User
-    health: String
-  }
-`);
-
-const users = [
-  { name: 'Hugo', age: 16 },
-  { name: 'Simon', age: 12 },
-  { name: 'Albert', age: 13 },
-  { name: 'David', age: 15 },
-  { name: 'Hakim', age: 19 },
-];
-
-// The root provides a resolver function for each API endpoint
-var root = {
-  user: ({id}) => {
-    return users[id];
-  },
-  health: () => {
-    return 'Server is working';
-  },
-};
+import { root } from './resolvers.js';
 
 var app = express();
 app.use('/graphql', graphqlHTTP({
