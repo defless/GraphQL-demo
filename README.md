@@ -1,5 +1,7 @@
 # GraphQL-demo 📊
 
+>The way you write the query is the way you get the data
+
 A [GraphQL](https://graphql.org/) demo for technological watch.  
 
 Install dependencies
@@ -78,8 +80,6 @@ query{
   }
 }
 ```
-
-*The way you write the query is the way you get the data*
 
 Let's assume now that you want the data of only one specific user with the the id `0`
 
